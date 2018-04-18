@@ -22,4 +22,4 @@ lpt 的 Blog 就这么开通了。
 ## 感谢
 感谢Hux.
 感谢CSDN博主窗外蟋蟀的blog.
-教程见https://blog.csdn.net/walkerhau/article/details/77394659?utm_source=debugrun&utm_medium=referral.
+教程见[窗外蟋蟀的blog](https://blog.csdn.net/walkerhau/article/details/77394659?utm_source=debugrun&utm_medium=referral).
