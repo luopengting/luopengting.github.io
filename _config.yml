@@ -61,7 +61,7 @@ netease_comment: false
 
 # Google Analytics
 ga_track_id: 'UA-117946512-1'            # Format: UA-xxxxxx-xx
-ga_domain: https://luopengting.github.io/
+ga_domain: https://luopengting.github.io
 
 
 
