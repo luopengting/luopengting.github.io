@@ -1,3 +1,16 @@
+---
+layout:     post
+title:      "读论文：A Survey of Model Compression and Acceleration for Deep Neural Networks"
+subtitle:   "关于神经网络的模型压缩和加速的综述"
+date:       2018-04-20 10:01:00
+author:     "lpt"
+header-img: "img/post-bg-2018.jpg"
+catalog: true
+tags:
+    - CNN
+    - 论文阅读
+---
+
 作者：Yu Cheng / Duo Wang / Pan Zhou / Tao Zhang
 
 发表时间：2017-10-23
