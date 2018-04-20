@@ -30,7 +30,7 @@ tags:
 - 知识精炼。知识精炼主要是学习一个精炼模型并且训练一个更紧凑的神经网络，以达到再现巨大经网络的输出。
 
 
-![image](../imageForArticles/2018-04-20_A_Survey_of_Model_Compression_and_Acceleration_for_Deep_Neural_Networks/table_1.png)
+![image](https://github.com/luopengting/luopengting.github.io/tree/master/imageForArticles/2018-04-20-A_Survey_of_Model_Compression_and_Acceleration_for_Deep_Neural_Networks/table_1.png)
 表一可以看到参数修剪和分享、低秩分解以及知识精炼的方法都可以用在卷积层和全连接层，而转移/压缩滤波器则只用于卷积层。低秩分解和转移压缩滤波器的方法使用的是端到端的pipeline，适合CPU/GPU环境。而参数修剪和共享使用不同的方法，如矢量量化，二进制编码和稀疏约束来执行任务，它通常需要几个步骤才能达到目标。
 
 关于训练，基于参数修剪/共享低秩分解的模型可以从预先训练的模型中提取或者从头开始训练。 转换/压缩滤波器和知识精炼模型只能支持从零开始训练。 这些方法是独立设计但相辅相成的。 例如，转移层和参数修剪/共享可以一起使用，并且模型量化和二值化可以与低秩近似一起使用以实现进一步的加速。 
@@ -66,17 +66,17 @@ tags:
 # 低秩分解和稀疏(Low-Rank Factorization and Sparsity)
 
 
-![image](../imageForArticles/2018-04-20_A_Survey_of_Model_Compression_and_Acceleration_for_Deep_Neural_Networks/figure_2.png)
+![image](https://github.com/luopengting/luopengting.github.io/tree/master/imageForArticles/2018-04-20-A_Survey_of_Model_Compression_and_Acceleration_for_Deep_Neural_Networks/figure_2.png)
 低秩矩阵的经典框架
 卷积需要大量的计算量，所以减少卷积的层数可以提高压缩率和加速。卷积核可以看成4维的张量。4D张量中含有大量冗余，张量分解的思路也由此而来。对于全连接层，可以看出2D矩阵，所以可以使用低秩方法。
 
 使用低阶滤波器来加速卷积。例如高维DCT（离散余弦变换）和使用张量积的小波系统分别由1D DCT变换和1D小波构成。学习可分离的1D滤波器由Rigamonti等人提出 [35]。关于一些简单的DNN模型，在[36]中提出了一些卷积核的低秩近似和聚类方案。他们为单一卷积层实现了2倍加速，分类精度下降1％。文献[37]中的工作提出使用不同的张量分解方案，报告4.5倍加速，文本识别精度下降1％。低阶逼近是逐层完成的。完成一层的参数后，根据重建误差准则对上述层进行微调。这些是压缩二维卷积层的典型低秩方法，如图2所示。遵循这个方向，对[38]中的核张量提出了Canonical Polyadic（CP）分解。他们的工作使用非线性最小二乘法来计算CP分解。在文献[39]中，提出了一种用于从头开始训练低秩受限CNN的低秩张量分解的新算法。它使用批量标准化（BN）来转换内部隐藏单元的激活。
 
-![image](../imageForArticles/2018-04-20_A_Survey_of_Model_Compression_and_Acceleration_for_Deep_Neural_Networks/CP_decomposition.png)
+![image](https://github.com/luopengting/luopengting.github.io/tree/master/imageForArticles/2018-04-20-A_Survey_of_Model_Compression_and_Acceleration_for_Deep_Neural_Networks/CP_decomposition.png)
 向量分解用于广义卷积，来自[38]
 
 下面是低秩模型及其基线模型在 ILSVRC-2012 数据集上的性能对比：
-![image](../imageForArticles/2018-04-20_A_Survey_of_Model_Compression_and_Acceleration_for_Deep_Neural_Networks/table_2.png)
+![image](https://github.com/luopengting/luopengting.github.io/tree/master/imageForArticles/2018-04-20-A_Survey_of_Model_Compression_and_Acceleration_for_Deep_Neural_Networks/table_2.png)
 
 基于低秩矩阵方法的各种baseline比较
 
@@ -104,4 +104,4 @@ tags:
 **缺陷**：缺基于KD的方法可以使更深的模型变得更浅，显着降低计算成本。 但是KD只能用于具有softmax损失函数的分类任务；另一个缺点是，模型假设有时过于严格，竞争力不够。
 
 # 其他类型的方法
-![image](../imageForArticles/2018-04-20_A_Survey_of_Model_Compression_and_Acceleration_for_Deep_Neural_Networks/table_4.png)
+![image](https://github.com/luopengting/luopengting.github.io/tree/master/imageForArticles/2018-04-20-A_Survey_of_Model_Compression_and_Acceleration_for_Deep_Neural_Networks/table_4.png)
