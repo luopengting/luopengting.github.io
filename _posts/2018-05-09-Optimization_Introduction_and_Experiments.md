@@ -39,7 +39,7 @@ y += nd.random.normal(scale=1, shape=y.shape)
 算某个batch里梯度的平均值，作为更新的梯度。如果我们只是使用小批量的样本来计算其梯度并且更新：
 $$\nabla f_\mathcal{B}(\boldsymbol{x}) = \frac{1}{|\mathcal{B}|} \sum_{i \in \mathcal{B}}\nabla f_i(\boldsymbol{x})$$ 
 
-小批量随机梯度也是对梯度的无偏估计，即$\mathbb{E}_\mathcal{B} \nabla f_\mathcal{B}(\boldsymbol{x}) = \nabla f(\boldsymbol{x}).$
+小批量随机梯度也是对梯度的无偏估计，即$$\mathbb{E}_\mathcal{B} \nabla f_\mathcal{B}(\boldsymbol{x}) = \nabla f(\boldsymbol{x}).$$
 
 更新$\boldsymbol{x}$：
 
@@ -58,7 +58,7 @@ $$f(\boldsymbol{x}) = \frac{1}{n} \sum_{i = 1}^n f_i(\boldsymbol{x}),$$
 
 $$\nabla f(\boldsymbol{x}) = \frac{1}{n} \sum_{i = 1}^n \nabla f_i(\boldsymbol{x}),$$
 
-当然，在这里随机梯度是梯度的无偏估计，也就是$\mathbb{E}_i \nabla f_i(\boldsymbol{x}) = \frac{1}{n} \sum_{i = 1}^n \nabla f_i(\boldsymbol{x}) = \nabla f(\boldsymbol{x}).$
+当然，在这里随机梯度是梯度的无偏估计，也就是$$\mathbb{E}_i \nabla f_i(\boldsymbol{x}) = \frac{1}{n} \sum_{i = 1}^n \nabla f_i(\boldsymbol{x}) = \nabla f(\boldsymbol{x}).$$
 
 然后随机均匀采样$i$并计算$\nabla f_i(\boldsymbol{x})$，更新$\boldsymbol{x}$：
 
