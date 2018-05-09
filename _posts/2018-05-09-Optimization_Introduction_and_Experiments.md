@@ -1,3 +1,15 @@
+---
+layout:     post
+title:      "学习记录：优化算法介绍与实践"
+subtitle:   "BGD, SGD, Mom, Adagrad, RMSProp, Adadelta, Adam"
+date:       2018-05-09 22:01:00
+author:     "lpt"
+header-img: "img/post-bg-2018.jpg"
+catalog: true
+tags:
+    - Optimazation
+---
+
 # 优化算法
 > 优化算法，查了一些资料，看了沐神的[优化算法](http://zh.gluon.ai/chapter_optimization/index.html)。学习了一番，并做如下记录。转载请注明出处。
 ## 局部最小值
