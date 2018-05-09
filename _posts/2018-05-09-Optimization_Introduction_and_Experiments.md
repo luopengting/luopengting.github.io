@@ -44,6 +44,7 @@ $$\nabla f_\mathcal{B}(\boldsymbol{x}) = \frac{1}{|\mathcal{B}|} \sum_{i \in \ma
 更新$\boldsymbol{x}$：
 
 $$\boldsymbol{x} \leftarrow \boldsymbol{x} - \eta \nabla f_\mathcal{B}(\boldsymbol{x}).$$
+
 $|\mathcal{B}|$代表样本批量大小，$\eta$（取正数）称作学习率
 
 ## 梯度下降 (Batch gradient descent)
@@ -85,6 +86,7 @@ def sgd(params, lr, batch_size):
 $$y^{(t)} = \gamma y^{(t-1)} + (1-\gamma) x^{(t)}.$$
 
 对它展开：
+$$
 \begin{align*}
 y^{(t)}  &= (1-\gamma) x^{(t)} + \gamma y^{(t-1)}\\
          &= (1-\gamma)x^{(t)} + (1-\gamma) \cdot \gamma x^{(t-1)} + \gamma^2y^{(t-2)}\\
@@ -92,7 +94,7 @@ y^{(t)}  &= (1-\gamma) x^{(t)} + \gamma y^{(t-1)}\\
          &= (1-\gamma)x^{(t)} + (1-\gamma) \cdot \gamma x^{(t-1)} + (1-\gamma) \cdot \gamma^2x^{(t-2)} + (1-\gamma) \cdot \gamma^3x^{(t-3)} + \gamma^4y^{(t-4)}\\
          &\ldots
 \end{align*}
-
+$$
 由于$ \lim_{n \rightarrow \infty}  (1-\frac{1}{n})^n = \exp(-1) \approx 0.3679,$ 我们把$1-\frac{1}{n}=\gamma$代入，则有：
 
 $ \lim_{\gamma \rightarrow 1}  \gamma^{1/(1-\gamma)} = \exp(-1) \approx 0.3679,$
@@ -106,10 +108,12 @@ $ \lim_{\gamma \rightarrow 1}  \gamma^{1/(1-\gamma)} = \exp(-1) \approx 0.3679,$
 
 对小批量梯度下降算法做如下修改：
 
+$$
 \begin{align*}
 \boldsymbol{v} &\leftarrow \gamma \boldsymbol{v} + \eta \nabla f_\mathcal{B}(\boldsymbol{x}),\\
 \boldsymbol{x} &\leftarrow \boldsymbol{x} - \boldsymbol{v}.
 \end{align*}
+$$
 
 对动量法的速度变量做变形：
 
