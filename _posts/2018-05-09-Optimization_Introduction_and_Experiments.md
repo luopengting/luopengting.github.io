@@ -45,7 +45,7 @@ $$\nabla f_\mathcal{B}(\boldsymbol{x}) = \frac{1}{|\mathcal{B}|} \sum_{i \in \ma
 
 $$\boldsymbol{x} \leftarrow \boldsymbol{x} - \eta \nabla f_\mathcal{B}(\boldsymbol{x}).$$
 
-$|\mathcal{B}|$代表样本批量大小，$\eta$（取正数）称作学习率
+在上面的式子中$\mathcal{B}$代表样本批量大小，$\eta$（取正数）称作学习率
 
 ## 梯度下降 (Batch gradient descent)
 当小批量梯度下降的batch_size为样本总数时，则为梯度下降。
