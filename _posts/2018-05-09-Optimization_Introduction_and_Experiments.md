@@ -10,7 +10,6 @@ catalog:      true
 multilingual: true
 tags:
     - Optimazation
-    - CNN
 ---
 
 # 优化算法
