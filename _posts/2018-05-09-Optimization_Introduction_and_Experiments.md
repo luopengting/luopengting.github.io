@@ -5,7 +5,9 @@ subtitle:   "BGD, SGD, Mom, Adagrad, RMSProp, Adadelta, Adam"
 date:       2018-05-09 22:01:00
 author:     "lpt"
 header-img: "img/post-bg-2018.jpg"
-catalog: true
+header-mask:  0.3
+catalog:      true
+multilingual: true
 tags:
     - Optimazation
 ---
