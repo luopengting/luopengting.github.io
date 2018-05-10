@@ -11,7 +11,7 @@ tags:
 ---
 
 # 优化算法
-> 优化算法，查了一些资料，看了沐神的[优化算法](http://zh.gluon.ai/chapter_optimization/index.html)。学习了一番，并做如下记录。转载请注明出处。
+> 优化算法，查了一些资料，看了沐神的[优化算法](http://zh.gluon.ai/chapter_optimization/index.html)。学习了一番，并做如下记录。转载请注明[萝卜-lpt](https://github.com/luopengting)。
 ## 局部最小值
 首先要区分局部最小值和全局最小值，这个应该大家都知道。
 ![局部最小值与全局最小值](https://upload-images.jianshu.io/upload_images/10171495-7b4fce181aef8b01.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
