@@ -110,7 +110,7 @@ tags:
 
  - 最大范数 max norm 25
 
-    最大范数$L^\infty$表示向量中最大元素的绝对值，即取决于最大幅度的元素：$$\left \| x \right \| _\infty=\max_i |x_i|$$
+    最大范数$L^\infty$表示向量中最大元素的绝对值，即取决于最大幅度的元素：$$|| x || _\infty=\max_i |x_i|$$
  - Frobenius范数 Frobenius norm 25,29,31,32
 
     衡量矩阵大小的最常见做法是Frobenius范数，类似于欧几里得范数，其方法是：$$\left \| A \right \|_F=\sqrt{\sum_{i,j}A_{i,j}^2}$$
